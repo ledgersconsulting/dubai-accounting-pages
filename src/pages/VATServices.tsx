@@ -1,4 +1,4 @@
-import { CheckCircle, Phone, FileCheck, ShieldCheck, ClipboardList, Users, ArrowRight, Clock, BadgeCheck, Building2, ShoppingCart, Briefcase, Package } from "lucide-react";
+import { CheckCircle, Phone, FileCheck, ShieldCheck, ClipboardList, Users, ArrowRight, Clock, BadgeCheck, Building2, ShoppingCart, Briefcase, Package, Calculator, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
@@ -26,6 +26,16 @@ const VATServices = () => {
       icon: Users,
       title: "Audit Support & Documentation",
       description: "Complete support for FTA audits and compliance."
+    },
+    {
+      icon: Calculator,
+      title: "Corporate Tax Registration",
+      description: "Expert guidance on UAE Corporate Tax registration and compliance."
+    },
+    {
+      icon: Scale,
+      title: "Corporate Tax Planning",
+      description: "Strategic tax planning to optimize your corporate tax position."
     }
   ];
 
@@ -33,7 +43,7 @@ const VATServices = () => {
     { icon: Clock, text: "Fast registration turnaround" },
     { icon: CheckCircle, text: "Error-free VAT returns" },
     { icon: ShieldCheck, text: "FTA audit support" },
-    { icon: BadgeCheck, text: "Tailored for your business" }
+    { icon: BadgeCheck, text: "Corporate tax expertise" }
   ];
 
   const targetAudience = [
@@ -45,7 +55,7 @@ const VATServices = () => {
 
   const steps = [
     { number: "01", title: "Sign Up & Share Documents", description: "Quick onboarding process" },
-    { number: "02", title: "We Register & File Returns", description: "Complete VAT management" },
+    { number: "02", title: "We Register & File Returns", description: "Complete VAT & Corporate Tax management" },
     { number: "03", title: "Get Compliant & Enjoy Peace of Mind", description: "Stay worry-free" }
   ];
 
@@ -81,11 +91,11 @@ const VATServices = () => {
               </div>
               
               <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight text-balance">
-                VAT Registration & Compliance in Dubai
+                VAT & Corporate Tax Services in Dubai
               </h1>
               
               <p className="text-xl lg:text-2xl mb-4 text-primary-foreground/90">
-                Hassle-free VAT solutions for businesses of all sizes.
+                Hassle-free VAT & Corporate Tax solutions for businesses of all sizes.
               </p>
               
               <p className="text-lg mb-8 text-primary-foreground/80">
@@ -96,7 +106,7 @@ const VATServices = () => {
                 <Button size="lg" variant="secondary" className="font-semibold group" asChild>
                   <a href="tel:+971585744945">
                     <Phone className="mr-2 h-5 w-5" />
-                    Register for VAT Now
+                    Call Now
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
@@ -122,14 +132,14 @@ const VATServices = () => {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-gold font-semibold text-sm tracking-widest uppercase mb-3 block">What We Offer</span>
             <h2 className="font-serif text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Complete VAT Services
+              VAT & Corporate Tax Services
             </h2>
             <p className="text-muted-foreground text-lg">
-              End-to-end VAT solutions to keep your business compliant with UAE tax laws.
+              End-to-end VAT and Corporate Tax solutions to keep your business compliant with UAE tax laws.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div 
                 key={index} 
@@ -165,12 +175,12 @@ const VATServices = () => {
             </div>
             
             <div className="order-1 lg:order-2">
-              <span className="text-gold font-semibold text-sm tracking-widest uppercase mb-3 block">Certified VAT Experts</span>
+              <span className="text-gold font-semibold text-sm tracking-widest uppercase mb-3 block">Certified Tax Experts</span>
               <h2 className="font-serif text-3xl lg:text-4xl font-bold text-foreground mb-6">
                 Stay Compliant with UAE Federal Tax Authority
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Our specialists ensure your VAT processes are compliant with UAE Federal Tax Authority (FTA) guidelines. We stay updated with the latest regulations to protect your business.
+                Our specialists ensure your VAT and Corporate Tax processes are compliant with UAE Federal Tax Authority (FTA) guidelines. We stay updated with the latest regulations to protect your business.
               </p>
               
               <div className="grid grid-cols-2 gap-4">
@@ -201,7 +211,7 @@ const VATServices = () => {
               Who Is This For?
             </h2>
             <p className="text-muted-foreground text-lg">
-              Our VAT services cater to businesses across all industries in Dubai.
+              Our VAT & Corporate Tax services cater to businesses across all industries in Dubai.
             </p>
           </div>
           
@@ -228,10 +238,10 @@ const VATServices = () => {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-gold-light font-semibold text-sm tracking-widest uppercase mb-3 block">Simple Process</span>
             <h2 className="font-serif text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">
-              How VAT Works
+              How It Works
             </h2>
             <p className="text-primary-foreground/80 text-lg">
-              Three simple steps to VAT compliance
+              Three simple steps to tax compliance
             </p>
           </div>
           
@@ -260,16 +270,16 @@ const VATServices = () => {
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <h2 className="font-serif text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                    Get Your VAT Sorted Today
+                    Get Your Tax Compliance Sorted Today
                   </h2>
                   <p className="text-muted-foreground text-lg mb-6">
-                    Don't risk penalties. Let our certified VAT experts handle your registration and compliance.
+                    Don't risk penalties. Let our certified tax experts handle your VAT and Corporate Tax registration and compliance.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Button size="lg" className="font-semibold" asChild>
                       <a href="tel:+971585744945">
                         <Phone className="mr-2 h-5 w-5" />
-                        Call: +971 58 574 4945
+                        Call Now
                       </a>
                     </Button>
                   </div>
