@@ -49,13 +49,13 @@ const AccountingServices = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-[600px] lg:min-h-[700px]">
+      <section className="relative min-h-[700px] lg:min-h-[800px]">
         {/* Background with overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${accountingHero})` }}
         >
-          <div className="absolute inset-0 hero-gradient opacity-90" />
+          <div className="absolute inset-0 hero-gradient opacity-95" />
         </div>
         
         {/* Decorative curves */}
@@ -66,51 +66,93 @@ const AccountingServices = () => {
           </svg>
         </div>
         
-        <div className="container mx-auto px-4 py-16 lg:py-24 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-4 py-16 lg:py-20 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left content */}
-            <div className="text-primary-foreground animate-fade-in">
+            <div className="text-primary-foreground animate-fade-in lg:pt-8">
               <div className="inline-flex items-center gap-2 bg-primary-foreground/10 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
                 <Shield className="h-4 w-4 text-gold-light" />
-                <span className="text-sm font-medium">Trusted by Dubai SMEs</span>
+                <span className="text-sm font-medium">Trusted by 500+ Dubai Businesses</span>
               </div>
               
-              <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight text-balance">
+              <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
                 Professional Accounting Services in Dubai
               </h1>
               
-              <p className="text-xl lg:text-2xl mb-4 text-primary-foreground/90">
-                Expert bookkeeping, VAT, payroll & financial reporting for businesses.
+              <p className="text-xl lg:text-2xl mb-6 text-primary-foreground/90 leading-relaxed">
+                Expert bookkeeping, VAT compliance, payroll & financial reporting for growing businesses.
               </p>
+
+              {/* Key Benefits List */}
+              <div className="space-y-4 mb-8">
+                {benefits.map((benefit, index) => (
+                  <div 
+                    key={index} 
+                    className="flex items-center gap-3 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="w-6 h-6 rounded-full bg-gold flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="h-4 w-4 text-accent-foreground" />
+                    </div>
+                    <span className="text-primary-foreground/90 font-medium">{benefit}</span>
+                  </div>
+                ))}
+              </div>
               
-              <div className="flex items-center gap-4 mb-8 text-primary-foreground/80">
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap items-center gap-6 mb-8 text-primary-foreground/80">
                 <div className="flex items-center gap-2">
                   <Clock className="h-5 w-5 text-gold-light" />
-                  <span>Quick Setup</span>
+                  <span className="text-sm">Quick Setup</span>
                 </div>
-                <span className="text-primary-foreground/40">|</span>
                 <div className="flex items-center gap-2">
                   <Award className="h-5 w-5 text-gold-light" />
-                  <span>Clear Pricing</span>
+                  <span className="text-sm">Clear Pricing</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Shield className="h-5 w-5 text-gold-light" />
+                  <span className="text-sm">FTA Registered</span>
                 </div>
               </div>
               
+              {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" variant="secondary" className="font-semibold group" asChild>
                   <a href="tel:+971585744945">
                     <Phone className="mr-2 h-5 w-5" />
-                    Call Now
+                    Call: +971 58 574 4945
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
               </div>
+
+              {/* Social Proof */}
+              <div className="mt-10 pt-8 border-t border-primary-foreground/20">
+                <p className="text-sm text-primary-foreground/70 mb-3">Trusted by businesses across UAE</p>
+                <div className="flex items-center gap-4">
+                  <div className="flex -space-x-2">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <div 
+                        key={i} 
+                        className="w-10 h-10 rounded-full bg-primary-foreground/20 border-2 border-primary flex items-center justify-center text-xs font-semibold text-primary-foreground"
+                      >
+                        {String.fromCharCode(64 + i)}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-sm">
+                    <span className="text-gold-light font-semibold">4.9/5</span>
+                    <span className="text-primary-foreground/70"> from 200+ reviews</span>
+                  </div>
+                </div>
+              </div>
             </div>
             
             {/* Right form */}
-            <div className="animate-slide-in-right" style={{ animationDelay: "0.2s" }}>
+            <div className="animate-slide-in-right lg:sticky lg:top-24" style={{ animationDelay: "0.2s" }}>
               <LeadForm 
-                title="Get a Free Quote"
-                subtitle="Fill in your details and we'll contact you within 24 hours"
+                title="Get Your Free Quote"
+                subtitle="Tell us about your business and get a custom proposal"
                 buttonText="Get My Free Quote"
                 variant="accounting"
               />
